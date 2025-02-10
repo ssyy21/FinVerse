@@ -1,0 +1,134 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: '#FEFBF3';
+  }
+  
+  .signup-wrapper {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .signup-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .name-fields {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .input-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .input-field {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .input-field::placeholder {
+    color: #999;
+  }
+  
+  .continue-button {
+    background-color: #4338CA;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .continue-button:hover {
+    background-color: #3d3273;
+  }
+  
+  .divider {
+    position: relative;
+    text-align: center;
+    margin: 8px 0;
+  }
+  
+  .divider-line {
+    border-top: 1px solid #ddd;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+  
+  .divider-text {
+    background: white;
+    padding: 0 12px;
+    color: #666;
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .google-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .signin-text {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+  
+  .signin-link {
+    color: #4c3f91;
+    background: none;
+    border: none;
+    padding: 0;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .signin-link:hover {
+    text-decoration: underline;
+  }

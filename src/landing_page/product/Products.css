@@ -1,0 +1,128 @@
+body {
+    background-color: #FEFBF3 !important; /* Ensure it applies */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .products-section{
+      text-align: center;
+      font-size: 1.5rem;
+      padding: auto;
+  }
+  /* .product-showcase {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #FEFBF3;
+    }
+     */
+    .product-container {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      margin-bottom: 4rem;
+      padding: 4rem;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .product-container.reversed {
+      flex-direction: row-reverse;
+    }
+    
+    .product-content {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    .product-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    
+    .product-image:hover {
+      transform: scale(1.02);
+    }
+    
+    .description-content {
+      /* padding: 1rem; */
+    }
+    
+    .product-title {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    
+    .product-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .demo-button, .learn-button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+    
+    .demo-button {
+      background-color: #007bff;
+      color: white;
+    }
+    
+    .learn-button {
+      background-color: #f8f9fa;
+      color: #007bff;
+      border: 1px solid #007bff;
+    }
+    
+    .demo-button:hover, .learn-button:hover {
+      transform: translateY(-2px);
+    }
+    
+    .demo-button:hover {
+      background-color: #0056b3;
+    }
+    
+    .learn-button:hover {
+      background-color: #e9ecef;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .product-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+      }
+    
+      .product-container.reversed {
+        flex-direction: column;
+      }
+    
+      .product-title {
+        font-size: 1.5rem;
+      }
+    
+      .product-description {
+        font-size: 1rem;
+      }
+    
+      .button-group {
+        flex-direction: column;
+      }
+    }
