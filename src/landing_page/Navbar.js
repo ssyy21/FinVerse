@@ -1,12 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Finverse from "./Finverse.png";
 function Navbar() {
   return (
     
       <nav className="navbar navbar-expand-lg border-bottom p-3" style={{ backgroundColor: "#2973B2", color: 'white' }}>
-        <div className="container-fluid">
-          <Link className="navbar-brand text-white" to="/Homepage">FINVERSE</Link>
+        <div className="container-fluid ml-2">
+          <Link className="navbar-brand text-white" to="/Homepage">
+          <img
+            src={Finverse}
+            alt="Finverse Logo"
+            className="h-10 w-auto"
+            style={{ height: "40px", width: "auto" }}
+          />
+          </Link>
           <button 
             className="navbar-toggler" 
             type="button" 
@@ -30,7 +37,7 @@ function Navbar() {
                 <Link className="nav-link text-white" to="/About">About</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" href="#">View Analytics</a>
+                <Link className="nav-link text-white" to="/TableauDashBoard">View Analytics</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/LogIn"

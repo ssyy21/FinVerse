@@ -8,6 +8,7 @@ import Navbar from './landing_page/Navbar';
 import Footer from './landing_page/Footer';
 import Homepage from './landing_page/home/Homepage';
 import Products from './landing_page/product/Products';
+import TableauDashboard from "./landing_page/viewAnalytics/TableauDashboard";
 // import Pricing from './landing_page/pricing/Pricing';
 // import LearningCenter from './landing_page/learning_center/Learning_center';
 import About from './landing_page/about/About';
@@ -36,6 +37,8 @@ root.render(
         <Route path="/fraud-detection-form" element={<FraudDetectionForm />} />
         <Route path="/budgeting-form" element={<BudgetingForm />} /> 
         <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/TableauDashboard" element={<TableauDashboard />} />
         <Route path="FraudDetectionForm" element={<FraudDetectionForm />} />
         <Route path="BudgetingForm " element={<BudgetingForm  />} />
       </Routes>
