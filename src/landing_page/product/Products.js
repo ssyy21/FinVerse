@@ -1,4 +1,5 @@
-import React from 'react';
+//import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';  // Add this import
 import './Products.css';
 import FraudImage from './FraudDetection.jpg';
@@ -6,11 +7,17 @@ import Budget from './budgeting.jpg';
 
 const Products = () => {
   const navigate = useNavigate();  // Add this hook
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleDemoClick = (productTitle) => {
+    const handleDemoClick = (productTitle) => {
+     
+    
     if (productTitle === "Smart Budgeting") {
-      navigate("/budgeting-form"); // Navigate to sales form for Smart Budgeting
-    } else {
+      window.location.href = " https://stsalesprediction-o0de926l0vn.streamlit.app/"; // Navigate to sales form for Smart Budgeting
+    } else if (productTitle === "Fraud Detection") {
+      window.location.href = "https://fraud-detection-app-krakxaitfyjrwoaa9435rj.streamlit.app/"; // Redirect to Streamlit app
+    }
+    else {
       navigate("/FraudDetectionForm"); // Default navigation for other products
     }
   };
