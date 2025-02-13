@@ -1,0 +1,118 @@
+/* Container for the split layout */
+.page-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Left image section */
+.image-section {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Right section container */
+.form-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #ffffff;
+}
+
+/* Credit Score Calculator Styles */
+.credit-calculator {
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+}
+
+.credit-calculator h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.form {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.input-group input {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.calculate-btn {
+  grid-column: span 2;
+  margin-top: 1rem;
+  padding: 0.875rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.calculate-btn:hover {
+  background: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+  }
+  
+  .image-section,
+  .form-section {
+    width: 100%;
+  }
+  
+  .image-section {
+    height: 300px;
+  }
+  
+  .form-section {
+    padding: 1rem;
+  }
+  
+  .form {
+    grid-template-columns: 1fr;
+  }
+  
+  .calculate-btn {
+    grid-column: 1;
+  }
+}
