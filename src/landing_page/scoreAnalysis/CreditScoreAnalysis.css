@@ -1,0 +1,44 @@
+.credit-score-container {
+    background-color: #f8f9fa;
+  }
+  
+  .hero-section {
+    background: linear-gradient(45deg, #4a85c0, #82a6d2);
+    padding: 80px 0;
+  }
+  
+  .text-white-75 {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .hero-image-container {
+    padding: 20px;
+  }
+  
+  .feature-card {
+    height: 100%;
+    transition: transform 0.2s;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+  }
+  
+  .btn {
+    border-radius: 25px;
+    font-weight: 500;
+  }
+  
+  .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }

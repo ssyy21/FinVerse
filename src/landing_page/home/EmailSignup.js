@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
 const EmailSignup = () => {
   return (
     <div className="flex justify-center items-center py-10"
@@ -19,6 +20,9 @@ const EmailSignup = () => {
         </Link>
       </div>
     </div>
+  
+    
+ 
   );
 };
 

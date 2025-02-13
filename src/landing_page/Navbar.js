@@ -37,6 +37,9 @@ function Navbar() {
                 <Link className="nav-link text-white" to="/About">About</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link text-white" to="/CreditScoreAnalysis">Credit Score Analysis</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link text-white" to="/TableauDashBoard">View Analytics</Link>
               </li>
               <li className="nav-item">
@@ -52,3 +55,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
