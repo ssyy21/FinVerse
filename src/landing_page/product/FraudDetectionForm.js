@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './FraudDetectionForm.css';
 import image from "./Fraud.jpg";
+
+
 const FraudDetectionForm = () => {
+  const [result, setResult] = useState(null);
   const [formData, setFormData] = useState({
     account: '',
     customer: '',
@@ -11,23 +14,92 @@ const FraudDetectionForm = () => {
     amount: '',
     anamoly: false,
     tran_data: '',
-    tran_rec: '',
+    tran_rec: null,
     LastLogin: ''
   });
 
+ 
+
+
+
+
+
+
+
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked, files } = e.target;
     setFormData(prevState => ({
       ...prevState,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === 'checkbox' ? checked :  value
     }));
   };
+  
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-    // Add your form submission logic here
+    
+
+    const updatedFormData = {
+      ...formData,
+      amount: parseFloat(formData.amount), // Ensuring it's a number
+      anamoly: formData.anamoly ? true : false, // Explicit boolean
+    };
+
+    try {
+      const response = await fetch("", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedFormData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch data from API");
+      }
+      const responseData = await response.json();  // Fix: Assign response to a variable
+      console.log(responseData); // Debugging: Check what the API returns
+
+      if (responseData && responseData.fraud_status) {
+        setResult(responseData.fraud_status); // Fix: Ensure correct field name
+      } else {
+        setResult("Unknown"); // Handle unexpected API response
+      }
+      
+    } catch (error) {
+      console.error("Error:", error);
+      setResult(null); // Display error message
+    }
   };
+
+  //     const data = await response.json();
+  //     console.log("API Response:", data);
+  //     setResult(data.fraud_status); // Store API response in state
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //   }
+  // };
+//   try {
+//     // Replace 'http://localhost:8000/predict' with your actual FastAPI endpoint
+//     const response = await fetch('http://127.0.0.1:8000/docs', {
+//       method: 'POST',
+//       body: formDataToSend // Sending FormData to backend
+//     });
+
+//     if (!response.ok) {
+//       throw new Error('Failed to submit form');
+//     }
+
+//     const result = await response.json();
+//     console.log('Response from API:', result);
+//     alert('Form submitted successfully!'); // Display success message
+
+//   } catch (error) {
+//     console.error('Error:', error);
+//     alert('Error submitting form'); // Display error message
+//   }
+// };
 
   return (
     <div className="fraud-detection-container p-5 mt-5 mb-5">
@@ -88,8 +160,19 @@ const FraudDetectionForm = () => {
               required
             />
           </div>
-
           <div className="form-group">
+            <label htmlFor="account">Transaction Category</label>
+            <input
+              type="text"
+              id="tran_cat"
+              name="tran_cat"
+              value={formData.tran_cat}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          {/* <div className="form-group">
             <label htmlFor="tran_cat">Transaction Category</label>
             <select
               id="tran_cat"
@@ -103,7 +186,7 @@ const FraudDetectionForm = () => {
               <option value="income">Income</option>
               <option value="transfer">Transfer</option>
             </select>
-          </div>
+          </div> */}
 
           <div className="form-group">
             <label htmlFor="amount">Amount</label>
@@ -143,7 +226,7 @@ const FraudDetectionForm = () => {
             />
           </div>
 
-          <div className="form-group">
+          {/* <div className="form-group">
             <label htmlFor="tran_rec">Transaction Receipt</label>
             <input
               type="file"
@@ -152,9 +235,9 @@ const FraudDetectionForm = () => {
               onChange={handleChange}
               accept=".pdf,.jpg,.jpeg,.png"
             />
-          </div>
+          </div> */}
 
-          <div className="form-group">
+          {/* <div className="form-group">
             <label htmlFor="LastLogin">Last Login Date</label>
             <input
               type="date"
@@ -164,12 +247,21 @@ const FraudDetectionForm = () => {
               onChange={handleChange}
               required
             />
-          </div>
+          </div> */}
 
           <button type="submit" className="submit-button">
             Submit Form
           </button>
         </form>
+ {/* Display result after submission */}
+ {result !== null && (
+          <div className="result-section">
+            <h3>Fraud Status:</h3>
+            <p className={result === "Fraud" ? "fraud-text" : "safe-text"}>
+              {result === "Fraud" ? "🚨 Fraud Detected!" : "✅ No Fraud Detected"}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
