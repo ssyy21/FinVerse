@@ -1,7 +1,10 @@
+//MY CODE
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./SignIn.css";
+
 
 export default function SignIn() {
   const navigate = useNavigate();
@@ -11,27 +14,42 @@ export default function SignIn() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(""); // Clear previous error messages
 
     try {
-      // Send login request to the backend
-      const response = await axios.post("http://localhost:3002/api/auth/login", {
+      const response = await axios.post("http://localhost:5001/login", {
         email,
         password,
       });
+      console.log("Login Response:", response.data); // Debugging
 
-      // Save the JWT token in local storage
-      localStorage.setItem("token", response.data.token);
+      if (response.data?.success && response.data?.token) {
+        
+        // Securely store token (preferably in sessionStorage)
+        sessionStorage.setItem("token", response.data.token);
+        navigate("/products");
 
-      // Redirect to the profile page
-      navigate("/profile");
+
+        
+        // Redirect to the profile/dashboard page
+        
+      } else {
+        setError(response.data?.message || "Invalid email or password.");
+      }
     } catch (err) {
-      setError("Invalid email or password");
-      console.error("Login failed:", err);
+      console.error("Login error:", err);
+      setError(
+        err.response?.data?.message ||
+        "Login failed. Please check your credentials and try again."
+      );
     }
   };
 
+
+
+
   return (
-    <div className="signin-container al" style={{ backgroundColor: "#FEFBF3" }}>
+    <div className="signin-container" style={{ backgroundColor: "#FEFBF3" }}>
       <div className="signin-box">
         <div className="signin-content">
           <h1>To get started, please Sign in</h1>
@@ -39,7 +57,6 @@ export default function SignIn() {
           <form onSubmit={handleSubmit}>
             <div className="input-group">
               <input
-                id="email"
                 type="email"
                 placeholder="Your email address"
                 value={email}
@@ -50,7 +67,6 @@ export default function SignIn() {
 
             <div className="input-group">
               <input
-                id="password"
                 type="password"
                 placeholder="Your password"
                 value={password}
@@ -75,17 +91,14 @@ export default function SignIn() {
           <button className="google-button">
             <img
               src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
-              alt=""
+              alt="Google Icon"
             />
             Continue with Google
           </button>
 
           <p className="signup-text">
             Don't have an account?{" "}
-            <button
-              onClick={() => navigate("/signup")}
-              className="signup-link"
-            >
+            <button onClick={() => navigate("/signup")} className="signup-link">
               Sign up
             </button>
           </p>
