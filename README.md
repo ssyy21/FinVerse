@@ -1,67 +1,35 @@
-# Getting Started with Create React App
+# Finverse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The Problem:
+Small businesses often face challenges in managing their finances efficiently due to limited resources, vulnerability to fraud, and lack of proper financial insights. Most financial management tools available today are either paid or designed for larger, well-established businesses, making them inaccessible or unsuitable for small businesses that need simple, affordable, and tailored solutions to protect their finances, plan budgets, and grow sustainably.
 
-## Available Scripts
+### Finverse: Empowering Small Businesses with Smart Financial Tools
+Finverse is an AI-powered financial management platform designed to help small businesses make informed decisions. It integrates machine learning for fraud detection and sales prediction, along with interactive dashboards for financial analysis. With tools for budgeting and credit assessment, Finverse empowers businesses to manage finances efficiently and drive growth.
 
-In the project directory, you can run:
 
-### `npm start`
+### Key Features Offered by Finverse
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Financial Fraud Detection Model
+Detects unusual patterns in financial transactions by analyzing multiple parameters such as transaction amount, frequency, and source. Alerts users about potential fraudulent activities, allowing them to take immediate action to prevent losses. Continuously improves its detection accuracy through machine learning by learning from past fraudulent and legitimate transactions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. Sales Prediction Model
+Uses historical sales data to identify trends and seasonal patterns, providing businesses with accurate sales forecasts. Helps businesses in inventory management by predicting product demand, preventing overstocking or stockouts. Assists in financial planning by estimating future revenues, enabling better resource allocation and expense management.
 
-### `npm test`
+### 3. Credit Score Analyzer
+Collects and evaluates user-input financial details such as outstanding debts, payment history, and credit utilization to calculate a credit score. Classifies the credit score into categories like good, bad, or very bad, helping businesses understand their credit standing. Provides tailored suggestions to improve credit scores, such as reducing outstanding debt, making timely payments, and maintaining a low credit utilization ratio.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. Tableau Dashboard for Financial Insights
+Analyzes past sales data  to provide insights into business performance, including revenue trends, product performance, and seasonal sales variations. Forecasts future sales and financial metrics based on historical data, helping businesses prepare for upcoming demands and challenges. Visualizes key financial data such as net sales, discounts, returns, and profit margins, allowing businesses to monitor their financial health in real-time.
 
-### `npm run build`
+### 5. User-Friendly Interface with Seamless Navigation
+Offers a clean and intuitive interface with easy access to all features, including fraud detection, sales prediction, financial dashboards, and credit score analysis. Supports quick onboarding with a simple login/signup process and clear guidance on how to use each tool effectively.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
