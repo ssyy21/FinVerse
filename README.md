@@ -6,6 +6,7 @@ Small businesses often face challenges in managing their finances efficiently du
 ### Finverse: Empowering Small Businesses with Smart Financial Tools
 Finverse is an AI-powered financial management platform designed to help small businesses make informed decisions. It integrates machine learning for fraud detection and sales prediction, along with interactive dashboards for financial analysis. With tools for budgeting and credit assessment, Finverse empowers businesses to manage finances efficiently and drive growth.
 
+https://github.com/user-attachments/assets/76a08809-76e6-4f75-8ac2-36f0165fbfa3
 
 ### Key Features Offered by Finverse
 
