@@ -24,15 +24,3 @@ Analyzes past sales data  to provide insights into business performance, includi
 ### 5. User-Friendly Interface with Seamless Navigation
 Offers a clean and intuitive interface with easy access to all features, including fraud detection, sales prediction, financial dashboards, and credit score analysis. Supports quick onboarding with a simple login/signup process and clear guidance on how to use each tool effectively.
 
-
-
-
-
-
-
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
