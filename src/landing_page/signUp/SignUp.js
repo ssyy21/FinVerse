@@ -107,14 +107,14 @@ export default function SignUp() {
             </div>
           </div>
 
-          <button type="button" className="google-button">
+          {/* <button type="button" className="google-button">
             <img
               src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
               alt=""
               className="google-icon"
             />
             Continue with Google
-          </button>
+          </button> */}
 
           <p className="signin-text">
             Already have an account?{" "}

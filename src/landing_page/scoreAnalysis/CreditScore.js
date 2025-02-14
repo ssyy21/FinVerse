@@ -68,10 +68,10 @@ const CreditScore = () => {
     annualIncome: 50000,
     outstandingDebt: 200,
     creditMix: 1,
-    paymentOfMinAmount: 2,
+    paymentOfMinimumAmount: 2,
     interestRate: 10,
-    numOfLoan: 2,
-    numCreditCard: 0,
+    numberOfLoans: 2,
+    numberOfCreditCard: 0,
     creditHistoryAge: 100,
   });
 
@@ -86,10 +86,10 @@ const CreditScore = () => {
       (inputs.annualIncome / 1000) - 
       (inputs.outstandingDebt / 50) + 
       inputs.creditMix * 10 + 
-      (inputs.paymentOfMinAmount * 5) - 
+      (inputs.paymentOfMinimumAmount * 5) - 
       (inputs.interestRate / 2) + 
-      (inputs.numOfLoan * 2) + 
-      (inputs.numCreditCard * 3) + 
+      (inputs.numberOfLoans * 2) + 
+      (inputs.numberOfCreditCard * 3) + 
       (inputs.creditHistoryAge / 5);
 
     if (score > 80) setResult("Very Good");

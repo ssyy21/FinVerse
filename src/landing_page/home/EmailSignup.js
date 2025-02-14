@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import { useNavigate } from 'react-router-dom';
 
 const EmailSignup = () => {
   const navigate = useNavigate(); // Hook for navigation
@@ -22,7 +22,6 @@ const EmailSignup = () => {
 
         <Link to="/signin">
         <button className="bg-blue-600 hover:bg-blue-700 text-white px-2 py-2 rounded-r-lg ml-4" style={{width : '25%' , backgroundColor: '#2973B2', borderRadius: "8px 8px 8px 8px"}}>
- main
           Get Started
         </button>
         </Link>

@@ -19,7 +19,7 @@ function Footer () {
                     <Link className='mb-4 text-white' style={{textDecoration:'none'}} to='/products'>Products </Link><br />
                     <Link className="mb-4 text-white" style={{textDecoration:'none'}} to="/TableauDashBoard">View Analytics</Link><br/>
                     <Link className='mb-4 text-white' style={{textDecoration:'none'}} to='/About'>About </Link><br />
-                    <Link className='mb-4 text-white' style={{textDecoration:'none'}} to='/Homepage'>Learning Center </Link><br />
+                    <Link className='mb-4 text-white' style={{textDecoration:'none'}} to='/CreditScore'>Credit Score Calculator</Link><br />
                     
                    
                 </div>

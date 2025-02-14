@@ -64,6 +64,7 @@ const CreditScoreAnalysis = () => {
                     4. Maintain old accounts to increase credit history.  <br></br>
                     5. Clear outstanding dues to remove negative remarks.
                 </p>
+                <a href='https://www.investopedia.com/terms/c/credit_score.asp' style={{textDecoration:'none'}}>Read more about this through this article.</a>
               </div>
             </div>
 
@@ -80,6 +81,7 @@ const CreditScoreAnalysis = () => {
                     4. Lower insurance premiums in some cases.  <br></br>
                     5. Better chances of renting a house or apartment.
                 </p>
+                <a href='https://www.finra.org/investors/personal-finance/how-your-credit-score-impacts-your-financial-future' style={{textDecoration:'none'}}>Read more about this through this article.</a>
               </div>
             </div>
 
@@ -96,6 +98,7 @@ const CreditScoreAnalysis = () => {
                     4. Closing old accounts shortens history and reduces credit.   <br></br>
                     
                 </p>
+                <a href='https://corporatefinanceinstitute.com/resources/commercial-lending/bad-credit-causes/' style={{textDecoration:'none'}}>Read more about this through this article.</a>
               </div>
             </div>
           </div>

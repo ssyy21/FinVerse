@@ -88,13 +88,13 @@ export default function SignIn() {
             <div className="divider-line"></div>
           </div>
 
-          <button className="google-button">
+          {/* <button className="google-button">
             <img
               src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
               alt="Google Icon"
             />
             Continue with Google
-          </button>
+          </button> */}
 
           <p className="signup-text">
             Don't have an account?{" "}
