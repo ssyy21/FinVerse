@@ -29,7 +29,7 @@ export default function SignUp() {
     setError(""); // Clear previous errors
 
     try {
-      const res = await axios.post("http://localhost:5001/signup", user);
+      const res = await axios.post("https://finverse-backend-mc6c.onrender.com/signup", user);
       alert(res.data.message);
       navigate("/signin"); // Redirect to sign-in page after signup
     } catch (err) {
